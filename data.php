@@ -7,8 +7,8 @@
  */
 function read_file($filename)
 {
-if (!file_exists($filename)) throw new \Exception($filename . ' not found.');
-    $data = file($filename);
+    if (!file_exists($filename)) throw new \Exception($filename . ' not found.');
+        $data = file($filename);
     return array_map(fn ($item) => unserialize($item), $data);
 }
 
