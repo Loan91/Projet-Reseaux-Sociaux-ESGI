@@ -1,12 +1,19 @@
 <?php
+
 namespace Core;
+
+use Core\Providers\ProviderFacebook;
+use Core\Providers\ProviderLinkedin;
 
 class Sdk
 {
     /** @var ProviderInterface */
     private $sdk;
 
-    private static $listProviders = [];
+    private static $listProviders = [
+        "Facebook" => ProviderFacebook::class,
+        "Linkedin" => ProviderLinkedin::class,
+    ];
 
     /**
      * @var $instances Instances des providers

@@ -20,7 +20,7 @@ $sdk = new Sdk([
             "name" => "Cours",
             "client_id" => "",
             "client_secret" => ""
-        ]
+        ],
     ]
 );
 
