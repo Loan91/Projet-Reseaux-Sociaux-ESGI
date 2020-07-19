@@ -27,7 +27,6 @@ $sdk = new Sdk([
 if (!isset($_GET["code"])) {
     $links = $sdk->getLinks();
     foreach ($links as $key => $link){
-        var_dump($link);
         echo "<a href='".$link."'>".$key."</a><br>";
     }
 } else {
